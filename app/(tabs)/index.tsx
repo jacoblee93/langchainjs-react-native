@@ -26,7 +26,7 @@ export default function HomeScreen() {
       return;
     }
     const prompt = ChatPromptTemplate.fromMessages([
-      ["system", "You are a parrot named Polly. Respond to all queries as a talking parrot would."],
+      ["system", "You are a friendly parrot named Polly. Respond to all queries as a talking parrot would."],
       ["placeholder", "{messages}"]
     ]);
     const originalInput = input;
@@ -47,11 +47,14 @@ export default function HomeScreen() {
   }
   return (
     <ThemedView style={styles.screen}>
+      <ThemedView style={styles.header}>
+        <ThemedText style={styles.headerText}>🦜🔗 LangChain.js + React Native ⚛️📱</ThemedText>
+      </ThemedView>
       <ThemedView style={styles.messagesContainer}>
         {messages.map((message, i) => {
           return (
             <ThemedView style={message._getType() === "human" ? styles.humanMessage : styles.aiMessage} key={i}>
-              <ThemedText>
+              <ThemedText style={styles.message}>
                 {typeof message.content === "string" ? message.content : JSON.stringify(message.content)}
               </ThemedText>
             </ThemedView>
@@ -83,9 +86,25 @@ const styles = StyleSheet.create({
     paddingTop: 64,
     padding: 8,
   },
-  messageInput: {
-    height: 24,
+  header: {
+    display: "flex",
+    alignItems: "center",
+    padding: 16,
+    borderBottomWidth: 1,
+    borderColor: "#d8d8d8"
+  },
+  headerText: {
     fontSize: 18,
+    fontWeight: 600,
+  },
+  messageInput: {
+    height: 48,
+    fontSize: 18,
+    paddingHorizontal: 12,
+    margin: 8,
+    borderWidth: 1,
+    borderRadius: 3,
+    borderColor: "#d8d8d8",
   },
   messagesContainer: {
     display: "flex",
@@ -104,9 +123,12 @@ const styles = StyleSheet.create({
   aiMessage: {
     marginTop: 8,
     marginRight: "auto",
-    paddingHorizontal: 8,
-    paddingVertical: 4,
+    paddingHorizontal: 12,
+    paddingVertical: 8,
     borderRadius: 3,
-    backgroundColor: "#218aff",
+    backgroundColor: "#3bb1ff",
+  },
+  message: {
+    fontSize: 18,
   }
 });

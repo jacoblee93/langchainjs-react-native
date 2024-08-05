@@ -2,6 +2,8 @@
 
 This project showcases the use of [LangChain.js](https://github.com/langchain-ai/langchainjs/) on mobile devices. It's a simple proof of concept built in React Native that allows you to send messages back and forth with an LLM, which has been prompted to take on the persona of a talking parrot named Polly.
 
+![Example conversation](/.github/static/reactnative.gif)
+
 For demo purposes, the app uses an Anthropic model and requires a secret key, but you could swap this for e.g. a model running locally on device in the future.
 
 ## Get started
