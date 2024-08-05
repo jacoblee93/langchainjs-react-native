@@ -2,7 +2,7 @@
 
 This project showcases the use of [LangChain.js](https://github.com/langchain-ai/langchainjs/) on mobile devices. It's a simple proof of concept built in React Native that allows you to send messages back and forth with an LLM, which has been prompted to take on the persona of a talking parrot named Polly.
 
-For demo purposes, the app uses an Anthropic model and requires a secret key, but you could swap this for e.g. a model running locally on device.
+For demo purposes, the app uses an Anthropic model and requires a secret key, but you could swap this for e.g. a model running locally on device in the future.
 
 ## Get started
 
@@ -10,9 +10,9 @@ This app uses [Expo](https://expo.dev). You can set it up with the following ins
 
 1. Install dependencies
 
-   ```bash
-   npm install
-   ```
+```bash
+npm install
+```
 
 2. Set environment variables
 
@@ -24,9 +24,9 @@ EXPO_PUBLIC_ANTHROPIC_API_KEY="YOUR_ANTHROPIC_KEY"
 
 2. Start the app
 
-   ```bash
-    npx expo start
-   ```
+```bash
+npx expo start
+```
 
 In the output, you'll find options to open the app in a
 
@@ -74,4 +74,4 @@ However, it should be possible to support streaming with a local model.
 
 Thanks for reading!
 
-This is an early prototype. If you have any questions or comments, please open an issue or DM me on X [@hacubu](https://x.com/hacubu)
+This is an early prototype. If you have any questions or comments, please open an issue or DM me on X [@hacubu](https://x.com/hacubu).
